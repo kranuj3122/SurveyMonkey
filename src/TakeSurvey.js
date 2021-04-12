@@ -26,7 +26,7 @@ const TakeSurvey = ({ queston }) => {
                       <input
                         type="radio"
                         className="form-check-input"
-                        name="random"
+                        name={"random" + key}
                         value=""
                       />
                       {opt.value}

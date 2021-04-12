@@ -22,7 +22,9 @@ const Option = ({ uid, addOptions, deleteOptions, updateText }) => {
         <button
           className="btn btn-outline-secondary"
           type="button"
-          onClick={deleteOptions}
+          onClick={(e) => {
+            deleteOptions(uid);
+          }}
         >
           -
         </button>

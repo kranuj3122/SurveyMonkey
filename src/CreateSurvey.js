@@ -22,10 +22,11 @@ const CreateSurvey = ({ squestions, setSquestion }) => {
     updatedOption.push(newOption);
     setOptions(updatedOption);
   };
-  const deleteOptions = () => {
+  const deleteOptions = (id) => {
     if (options.length > 2) {
-      const updatedOption = [...options];
-      updatedOption.pop();
+      console.log(id);
+      let updatedOption = [...options];
+      updatedOption = updatedOption.filter((item) => item.uid !== id);
       setOptions(updatedOption);
     }
   };
