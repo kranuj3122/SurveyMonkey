@@ -25,8 +25,7 @@ const CreateSurvey = ({ squestions, setSquestion }) => {
   const deleteOptions = (id) => {
     if (options.length > 2) {
       console.log(id);
-      let updatedOption = [...options];
-      updatedOption = updatedOption.filter((item) => item.uid !== id);
+      let updatedOption = [...options].filter((item) => item.uid !== id);
       setOptions(updatedOption);
     }
   };
@@ -65,7 +64,7 @@ const CreateSurvey = ({ squestions, setSquestion }) => {
           {options.map((opt, key) => (
             <Option
               key={key}
-              uid={opt.uid}
+              opt={opt}
               addOptions={addOptions}
               deleteOptions={deleteOptions}
               updateText={updateTextOption}
